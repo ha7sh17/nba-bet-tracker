@@ -373,13 +373,13 @@
         }
 
         function getProjectedRound(seed, playoffStatus) {
-            if (playoffStatus === 'out') return { round: 0, label: '플옵 탈락', class: 'round-out' };
-            if (playoffStatus === 'playin') return { round: 0.5, label: '플레이인', class: 'round-playin' };
+            if (playoffStatus === 'out') return { round: 0, label: '플옵 탈락 예상', class: 'round-out' };
+            if (playoffStatus === 'playin') return { round: 0.5, label: '플레이인 예상', class: 'round-playin' };
             if (seed === 1) return { round: 4, label: '파이널 예상', class: 'round-finals' };
-            if (seed === 2) return { round: 3.5, label: '컨퍼런스 파이널', class: 'round-conf-finals' };
-            if (seed <= 4) return { round: 3, label: '컨퍼런스 세미', class: 'round-conf-semis' };
-            if (seed <= 6) return { round: 2, label: '1라운드', class: 'round-first-round' };
-            return { round: 1, label: '플레이인', class: 'round-playin' };
+            if (seed === 2) return { round: 3.5, label: '컨퍼런스 파이널 예상', class: 'round-conf-finals' };
+            if (seed <= 4) return { round: 3, label: '컨퍼런스 세미 예상', class: 'round-conf-semis' };
+            if (seed <= 6) return { round: 2, label: '1라운드 예상', class: 'round-first-round' };
+            return { round: 1, label: '플레이인 예상', class: 'round-playin' };
         }
 
         function oddsToNumber(odds) {
@@ -457,6 +457,7 @@
                         <div class="ladder-value">
                             <div class="main">${p.conference} #${p.seed}</div>
                             <div class="sub">${p.wins}-${p.losses}</div>
+                            <span class="round-badge ${p.projected.class}" style="font-size: 0.6rem; margin-top: 4px;">${p.projected.label}</span>
                         </div>
                     </div>
                 `;
