@@ -8,7 +8,7 @@
     "CLE": "12",
     "HOU": "20",
     "LAL": "40",
-    "GSW": "125"
+    "GS": "125"
   },
   "allTeams": [
     {"team": "Oklahoma City Thunder", "abbr": "OKC", "odds": "6/5"},
