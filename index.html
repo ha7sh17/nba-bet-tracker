@@ -16,13 +16,10 @@
             --gold: #ffd700;
             --silver: #c0c0c0;
             --bronze: #cd7f32;
+            --green: #22c55e;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Inter', -apple-system, sans-serif;
@@ -32,26 +29,13 @@
             padding: 20px;
         }
         
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+        .container { max-width: 800px; margin: 0 auto; }
         
-        header {
-            text-align: center;
-            padding: 40px 0;
-        }
+        header { text-align: center; padding: 40px 0; }
         
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 10px;
-        }
+        h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 10px; }
         
-        .subtitle {
-            color: var(--text-dim);
-            font-size: 1rem;
-        }
+        .subtitle { color: var(--text-dim); font-size: 1rem; }
         
         .status-badge {
             display: inline-block;
@@ -62,10 +46,6 @@
             font-size: 0.85rem;
             font-weight: 600;
             margin-top: 15px;
-        }
-        
-        .status-badge.playoffs {
-            background: #dc2626;
         }
         
         .leader-section {
@@ -85,26 +65,11 @@
             margin-bottom: 15px;
         }
         
-        .leader-name {
-            font-size: 2rem;
-            font-weight: 900;
-        }
+        .leader-name { font-size: 2rem; font-weight: 900; }
+        .leader-team { color: var(--text-dim); margin-top: 5px; }
+        .leader-status { margin-top: 15px; font-size: 1.1rem; }
         
-        .leader-team {
-            color: var(--text-dim);
-            margin-top: 5px;
-        }
-        
-        .leader-status {
-            margin-top: 15px;
-            font-size: 1.1rem;
-        }
-        
-        .standings-grid {
-            display: grid;
-            gap: 12px;
-            margin-top: 30px;
-        }
+        .standings-grid { display: grid; gap: 12px; margin-top: 30px; }
         
         .participant-card {
             display: grid;
@@ -123,47 +88,25 @@
             border-color: #555;
         }
         
-        .participant-card.eliminated {
-            opacity: 0.5;
-        }
+        .participant-card.eliminated { opacity: 0.5; }
         
-        .rank {
-            font-size: 1.5rem;
-            font-weight: 900;
-            text-align: center;
-        }
-        
+        .rank { font-size: 1.5rem; font-weight: 900; text-align: center; }
         .rank.gold { color: var(--gold); }
         .rank.silver { color: var(--silver); }
         .rank.bronze { color: var(--bronze); }
         
-        .participant-info h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
+        .participant-info h3 { font-size: 1.1rem; font-weight: 700; }
+        .team-name { color: var(--text-dim); font-size: 0.9rem; margin-top: 3px; }
         
-        .team-name {
-            color: var(--text-dim);
+        .standing-info { text-align: right; }
+        .seed { font-size: 1.2rem; font-weight: 700; }
+        .record { color: var(--text-dim); font-size: 0.85rem; }
+        
+        .odds {
+            color: var(--green);
             font-size: 0.9rem;
-            margin-top: 3px;
-        }
-        
-        .team-logo {
-            font-size: 1.5rem;
-        }
-        
-        .standing-info {
-            text-align: right;
-        }
-        
-        .seed {
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-        
-        .record {
-            color: var(--text-dim);
-            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 4px;
         }
         
         .round-badge {
@@ -183,6 +126,43 @@
         .round-playin { background: #7c3aed; }
         .round-out { background: #dc2626; }
         
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dim);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .odds-section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+        
+        .odds-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+        }
+        
+        .odds-item {
+            background: #252525;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .odds-item .name { font-weight: 600; font-size: 0.95rem; }
+        .odds-item .team { font-size: 0.8rem; color: var(--text-dim); margin-top: 2px; }
+        .odds-item .value { font-size: 1.2rem; font-weight: 900; color: var(--green); margin-top: 8px; }
+        .odds-item .rank-label { font-size: 0.7rem; color: var(--text-dim); margin-top: 4px; }
+        
         .rules-section {
             background: var(--card);
             border: 1px solid var(--border);
@@ -191,26 +171,10 @@
             margin-top: 40px;
         }
         
-        .rules-section h3 {
-            font-size: 1rem;
-            margin-bottom: 15px;
-            color: var(--text-dim);
-        }
-        
-        .rules-section ul {
-            list-style: none;
-            font-size: 0.9rem;
-            color: var(--text-dim);
-        }
-        
-        .rules-section li {
-            padding: 5px 0;
-        }
-        
-        .rules-section li::before {
-            content: "→ ";
-            color: var(--gold);
-        }
+        .rules-section h3 { font-size: 1rem; margin-bottom: 15px; color: var(--text-dim); }
+        .rules-section ul { list-style: none; font-size: 0.9rem; color: var(--text-dim); }
+        .rules-section li { padding: 5px 0; }
+        .rules-section li::before { content: "→ "; color: var(--gold); }
         
         .update-time {
             text-align: center;
@@ -220,11 +184,7 @@
             padding-bottom: 30px;
         }
         
-        .loading {
-            text-align: center;
-            padding: 60px;
-            color: var(--text-dim);
-        }
+        .loading { text-align: center; padding: 60px; color: var(--text-dim); }
         
         .spinner {
             display: inline-block;
@@ -236,15 +196,21 @@
             animation: spin 1s linear infinite;
         }
         
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
+        @keyframes spin { to { transform: rotate(360deg); } }
+        
         .conference-label {
             font-size: 0.7rem;
             color: var(--text-dim);
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .participant-card { grid-template-columns: 40px 1fr auto; gap: 10px; padding: 12px 15px; }
+            .rank { font-size: 1.2rem; }
+            .participant-info h3 { font-size: 1rem; }
+            .odds-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
@@ -259,7 +225,7 @@
         <div id="content">
             <div class="loading">
                 <div class="spinner"></div>
-                <p style="margin-top: 15px;">스탠딩 불러오는 중...</p>
+                <p style="margin-top: 15px;">데이터 불러오는 중...</p>
             </div>
         </div>
         
@@ -267,7 +233,7 @@
             <h3>📋 내기 규칙</h3>
             <ul>
                 <li>플레이오프에서 가장 높은 라운드에 진출한 팀이 우승</li>
-                <li>라운드: 16강 → 8강 → 4강 → 결승 → 우승</li>
+                <li>라운드: 1라운드 → 컨퍼런스 세미 → 컨퍼런스 파이널 → 파이널 → 우승</li>
                 <li>승패 기록은 무관, 라운드만 중요</li>
                 <li>같은 라운드면 공동 우승</li>
             </ul>
@@ -279,47 +245,54 @@
     <script>
         // 참가자 데이터
         const participants = [
-            { name: '한신', teamId: 'DEN', team: 'Denver Nuggets', teamKr: '덴버 너게츠', conf: 'West' },
-            { name: '동수', teamId: 'CLE', team: 'Cleveland Cavaliers', teamKr: '클리블랜드 캐벌리어스', conf: 'East' },
-            { name: '승우', teamId: 'LAL', team: 'Los Angeles Lakers', teamKr: 'LA 레이커스', conf: 'West' },
-            { name: '한근', teamId: 'NY', team: 'New York Knicks', teamKr: '뉴욕 닉스', conf: 'East' },
-            { name: '에스겔', teamId: 'HOU', team: 'Houston Rockets', teamKr: '휴스턴 로케츠', conf: 'West' },
-            { name: '지혁', teamId: 'SA', team: 'San Antonio Spurs', teamKr: '샌안토니오 스퍼스', conf: 'West' },
-            { name: '성욱', teamId: 'OKC', team: 'Oklahoma City Thunder', teamKr: 'OKC 썬더', conf: 'West' },
+            { name: '한신', teamId: 'DEN', espnId: '7', teamKr: '덴버', conf: 'West' },
+            { name: '동수', teamId: 'CLE', espnId: '5', teamKr: '클리블랜드', conf: 'East' },
+            { name: '승우', teamId: 'LAL', espnId: '13', teamKr: '레이커스', conf: 'West' },
+            { name: '한근', teamId: 'NY', espnId: '18', teamKr: '뉴욕', conf: 'East' },
+            { name: '에스겔', teamId: 'HOU', espnId: '10', teamKr: '휴스턴', conf: 'West' },
+            { name: '지혁', teamId: 'SA', espnId: '24', teamKr: '샌안토니오', conf: 'West' },
+            { name: '성욱', teamId: 'OKC', espnId: '25', teamKr: 'OKC', conf: 'West' },
         ];
 
-        // 팀 이모지
         const teamEmoji = {
             'DEN': '⛏️', 'CLE': '⚔️', 'LAL': '💜', 'NY': '🗽', 
             'HOU': '🚀', 'SA': '🤠', 'OKC': '⚡'
         };
 
-        // ESPN API에서 스탠딩 가져오기
+        // ESPN 스탠딩 API
         async function fetchStandings() {
             try {
                 const response = await fetch('https://site.api.espn.com/apis/v2/sports/basketball/nba/standings');
                 const data = await response.json();
                 return parseESPNStandings(data);
             } catch (error) {
-                console.error('ESPN API failed:', error);
+                console.error('Standings API failed:', error);
                 return null;
+            }
+        }
+
+        // ESPN 우승 오즈 API
+        async function fetchOdds() {
+            try {
+                const response = await fetch('https://sports.core.api.espn.com/v2/sports/basketball/nba/seasons/2026/futures/2564');
+                const data = await response.json();
+                return parseESPNOdds(data);
+            } catch (error) {
+                console.error('Odds API failed:', error);
+                return {};
             }
         }
 
         function parseESPNStandings(data) {
             const standings = {};
-            
             data.children.forEach(conference => {
                 const confName = conference.name.includes('Eastern') ? 'East' : 'West';
                 conference.standings.entries.forEach((entry) => {
-                    const team = entry.team;
-                    const abbr = team.abbreviation;
+                    const abbr = entry.team.abbreviation;
                     const stats = entry.stats;
-                    
                     const wins = stats.find(s => s.name === 'wins')?.value || 0;
                     const losses = stats.find(s => s.name === 'losses')?.value || 0;
                     const seed = stats.find(s => s.name === 'playoffSeed')?.value || 15;
-                    
                     standings[abbr] = {
                         seed: Math.round(seed),
                         wins: Math.round(wins),
@@ -329,64 +302,72 @@
                     };
                 });
             });
-            
             return standings;
         }
 
+        function parseESPNOdds(data) {
+            const odds = {};
+            if (data.futures && data.futures[0] && data.futures[0].books) {
+                data.futures[0].books.forEach(book => {
+                    const teamRef = book.team.$ref;
+                    const teamId = teamRef.split('/teams/')[1].split('?')[0];
+                    odds[teamId] = book.value;
+                });
+            }
+            return odds;
+        }
+
         function getPlayoffStatus(seed) {
-            if (seed <= 6) return 'playoff'; // 직행
-            if (seed <= 10) return 'playin'; // 플레이인
-            return 'out'; // 탈락
+            if (seed <= 6) return 'playoff';
+            if (seed <= 10) return 'playin';
+            return 'out';
         }
 
         function getProjectedRound(seed, playoffStatus) {
             if (playoffStatus === 'out') return { round: 0, label: '플옵 탈락', class: 'round-out' };
             if (playoffStatus === 'playin') return { round: 0.5, label: '플레이인', class: 'round-playin' };
-            
-            // 시드 기반 예상 라운드 (역대 데이터 기반 대략적 추정)
             if (seed === 1) return { round: 4, label: '파이널 예상', class: 'round-finals' };
             if (seed === 2) return { round: 3.5, label: '컨퍼런스 파이널', class: 'round-conf-finals' };
             if (seed <= 4) return { round: 3, label: '컨퍼런스 세미', class: 'round-conf-semis' };
             if (seed <= 6) return { round: 2, label: '1라운드', class: 'round-first-round' };
-            
             return { round: 1, label: '플레이인', class: 'round-playin' };
         }
 
-        function renderStandings(standings) {
+        function oddsToNumber(odds) {
+            if (!odds) return 999999;
+            const num = parseInt(odds.replace('+', '').replace('-', ''));
+            return odds.startsWith('-') ? -num : num;
+        }
+
+        function renderAll(standings, odds) {
             if (!standings) {
                 document.getElementById('content').innerHTML = `
                     <div class="loading">
-                        <p>😢 스탠딩을 불러올 수 없습니다</p>
-                        <p style="font-size: 0.85rem; margin-top: 10px;">잠시 후 다시 시도해주세요</p>
+                        <p>😢 데이터를 불러올 수 없습니다</p>
                     </div>
                 `;
                 return;
             }
 
-            // 참가자에 스탠딩 정보 추가
-            const participantsWithStandings = participants.map(p => {
+            // 참가자에 데이터 추가
+            const participantsWithData = participants.map(p => {
                 const teamStanding = standings[p.teamId] || { seed: 99, wins: 0, losses: 0, playoffStatus: 'out' };
                 const projected = getProjectedRound(teamStanding.seed, teamStanding.playoffStatus);
-                return {
-                    ...p,
-                    ...teamStanding,
-                    projected
-                };
+                const teamOdds = odds[p.espnId] || null;
+                return { ...p, ...teamStanding, projected, odds: teamOdds };
             });
 
             // 순위 정렬 (예상 라운드 → 시드)
-            participantsWithStandings.sort((a, b) => {
-                if (b.projected.round !== a.projected.round) {
-                    return b.projected.round - a.projected.round;
-                }
+            participantsWithData.sort((a, b) => {
+                if (b.projected.round !== a.projected.round) return b.projected.round - a.projected.round;
                 return a.seed - b.seed;
             });
 
-            // 현재 1등 찾기
-            const leader = participantsWithStandings[0];
-            const tiedLeaders = participantsWithStandings.filter(p => 
-                p.projected.round === leader.projected.round
-            );
+            // 오즈 기준 정렬 (별도)
+            const byOdds = [...participantsWithData].sort((a, b) => oddsToNumber(a.odds) - oddsToNumber(b.odds));
+
+            const leader = participantsWithData[0];
+            const tiedLeaders = participantsWithData.filter(p => p.projected.round === leader.projected.round);
 
             let leaderHTML = '';
             if (tiedLeaders.length > 1) {
@@ -414,9 +395,10 @@
                 `;
             }
 
-            const cardsHTML = participantsWithStandings.map((p, idx) => {
+            const cardsHTML = participantsWithData.map((p, idx) => {
                 const rankClass = idx === 0 ? 'gold' : idx === 1 ? 'silver' : idx === 2 ? 'bronze' : '';
                 const eliminatedClass = p.projected.round === 0 ? 'eliminated' : '';
+                const oddsHTML = p.odds ? `<div class="odds">🎰 ${p.odds}</div>` : '';
                 
                 return `
                     <div class="participant-card ${eliminatedClass}">
@@ -427,31 +409,48 @@
                         </div>
                         <div class="standing-info">
                             <div class="seed">
-                                <span class="conference-label">${p.conference}</span> 
-                                #${p.seed}
+                                <span class="conference-label">${p.conference}</span> #${p.seed}
                             </div>
                             <div class="record">${p.wins}승 ${p.losses}패</div>
+                            ${oddsHTML}
                             <span class="round-badge ${p.projected.class}">${p.projected.label}</span>
                         </div>
                     </div>
                 `;
             }).join('');
 
+            // 오즈 순위 섹션
+            const oddsGridHTML = byOdds.map((p, idx) => {
+                const oddsRank = idx + 1;
+                return `
+                    <div class="odds-item">
+                        <div class="name">${p.name}</div>
+                        <div class="team">${teamEmoji[p.teamId]} ${p.teamKr}</div>
+                        <div class="value">${p.odds || 'N/A'}</div>
+                        <div class="rank-label">배당 ${oddsRank}위</div>
+                    </div>
+                `;
+            }).join('');
+
             document.getElementById('content').innerHTML = `
                 ${leaderHTML}
-                <div class="standings-grid">
-                    ${cardsHTML}
+                
+                <div class="section-title">📊 시드 기준 순위</div>
+                <div class="standings-grid">${cardsHTML}</div>
+                
+                <div class="section-title">🎰 ESPN BET 우승 배당률</div>
+                <div class="odds-section">
+                    <div class="odds-grid">${oddsGridHTML}</div>
                 </div>
             `;
 
             document.getElementById('update-time').textContent = 
-                `마지막 업데이트: ${new Date().toLocaleString('ko-KR')}`;
+                `마지막 업데이트: ${new Date().toLocaleString('ko-KR')} · 데이터: ESPN`;
         }
 
-        // 초기화
         async function init() {
-            const standings = await fetchStandings();
-            renderStandings(standings);
+            const [standings, odds] = await Promise.all([fetchStandings(), fetchOdds()]);
+            renderAll(standings, odds);
         }
 
         init();
