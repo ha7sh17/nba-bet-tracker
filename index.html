@@ -48,6 +48,37 @@
             margin-top: 15px;
         }
         
+        .money-stack {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            position: relative;
+            height: 50px;
+        }
+        
+        .money-bill {
+            position: absolute;
+            font-size: 1.8rem;
+            transition: transform 0.3s;
+        }
+        
+        .money-stack:hover .money-bill {
+            animation: scatter 0.5s ease-out forwards;
+        }
+        
+        @keyframes scatter {
+            to { transform: translateX(var(--tx)) translateY(var(--ty)) rotate(var(--rot)); }
+        }
+        
+        .prize-amount {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-left: 80px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        
         .leader-section {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             border: 2px solid var(--gold);
@@ -225,6 +256,15 @@
             <h1><img src="https://cdn.nba.com/logos/leagues/logo-nba.svg" alt="NBA" style="height: 1.2em; vertical-align: middle; margin-right: 8px;">문정늪 파이널우승 내기 🏆</h1>
             <p class="subtitle">누가 플레이오프에서 가장 멀리 갈까?</p>
             <div class="status-badge" id="season-status">정규시즌 진행 중</div>
+            <div class="money-stack">
+                <span class="money-bill" style="--tx: -40px; --ty: -10px; --rot: -15deg; left: 0px; transform: rotate(-8deg);">💵</span>
+                <span class="money-bill" style="--tx: -20px; --ty: 15px; --rot: 10deg; left: 8px; transform: rotate(-4deg);">💵</span>
+                <span class="money-bill" style="--tx: 10px; --ty: -20px; --rot: -20deg; left: 16px; transform: rotate(0deg);">💵</span>
+                <span class="money-bill" style="--tx: 30px; --ty: 10px; --rot: 15deg; left: 24px; transform: rotate(3deg);">💵</span>
+                <span class="money-bill" style="--tx: 50px; --ty: -5px; --rot: -10deg; left: 32px; transform: rotate(6deg);">💵</span>
+                <span class="money-bill" style="--tx: -30px; --ty: 20px; --rot: 25deg; left: 40px; transform: rotate(-2deg);">💵</span>
+                <span class="prize-amount">₩700,000</span>
+            </div>
         </header>
         
         <div id="content">
