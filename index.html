@@ -438,14 +438,14 @@
                 <div class="section-title">📊 시드 기준 순위</div>
                 <div class="standings-grid">${cardsHTML}</div>
                 
-                <div class="section-title">🎰 우승 배당률 <span style="font-size: 0.7rem; font-weight: 400; color: #666;">powered by ESPN BET</span></div>
+                <div class="section-title">🎰 우승 배당률 <span style="font-size: 0.7rem; font-weight: 400; color: #666;">powered by</span> <img src="https://a.espncdn.com/combiner/i?img=/i/espn/networks/espn_bet_light.png&w=100" alt="ESPN BET" style="height: 1em; vertical-align: middle;"></div>
                 <div class="odds-section">
                     <div class="odds-grid">${oddsGridHTML}</div>
                 </div>
             `;
 
             document.getElementById('update-time').innerHTML = 
-                `마지막 업데이트: ${new Date().toLocaleString('ko-KR')}<br>📡 데이터 출처: <a href="https://www.espn.com/nba/standings" target="_blank" style="color: #888;">ESPN</a> · <a href="https://espnbet.com" target="_blank" style="color: #888;">ESPN BET</a>`;
+                `마지막 업데이트: ${new Date().toLocaleString('ko-KR')}<br>📡 데이터 출처: <a href="https://www.espn.com/nba/" target="_blank"><img src="https://a.espncdn.com/combiner/i?img=/i/espn/networks/espn_red.png&w=80" alt="ESPN" style="height: 0.9em; vertical-align: middle;"></a>`;
         }
 
         async function init() {
