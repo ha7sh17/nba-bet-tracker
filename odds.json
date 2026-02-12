@@ -6,9 +6,9 @@
     "DEN": "11/2",
     "NY": "12",
     "CLE": "12",
-    "SA": "15",
     "HOU": "20",
-    "LAL": "40"
+    "LAL": "40",
+    "GSW": "125"
   },
   "allTeams": [
     {"team": "Oklahoma City Thunder", "abbr": "OKC", "odds": "6/5"},
