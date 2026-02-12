@@ -311,21 +311,21 @@
             
             data.children.forEach(conference => {
                 const confName = conference.name.includes('Eastern') ? 'East' : 'West';
-                conference.standings.entries.forEach((entry, index) => {
+                conference.standings.entries.forEach((entry) => {
                     const team = entry.team;
                     const abbr = team.abbreviation;
                     const stats = entry.stats;
                     
                     const wins = stats.find(s => s.name === 'wins')?.value || 0;
                     const losses = stats.find(s => s.name === 'losses')?.value || 0;
-                    const seed = index + 1;
+                    const seed = stats.find(s => s.name === 'playoffSeed')?.value || 15;
                     
                     standings[abbr] = {
-                        seed,
+                        seed: Math.round(seed),
                         wins: Math.round(wins),
                         losses: Math.round(losses),
                         conference: confName,
-                        playoffStatus: getPlayoffStatus(seed)
+                        playoffStatus: getPlayoffStatus(Math.round(seed))
                     };
                 });
             });
